@@ -1,0 +1,7 @@
+[0m[[0minfo[0m] [0mPackaging /usr/hadoop/lijun/project-se003/spark-es-test/target/scala-2.10/sparkes-test_2.10-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	SparkES$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-es-test/target/scala-2.10/classes/SparkES$.class[0m
+[0m[[0mdebug[0m] [0m	SparkES.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-es-test/target/scala-2.10/classes/SparkES.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
