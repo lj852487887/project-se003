@@ -4,6 +4,8 @@
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}
 
+import org.elasticsearch.spark.sql._
+
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 
@@ -23,7 +25,7 @@ object SparkES {
 	val jsonDf = sqlContext.read.json(jsonPath)
 
     //Storing it in Elastic Search Dynamically
-	import org.elasticsearch.spark.sql._
+	
 	jsonDf.saveToEs("lijun/meta", cfg = esConfig)
   }
 }
