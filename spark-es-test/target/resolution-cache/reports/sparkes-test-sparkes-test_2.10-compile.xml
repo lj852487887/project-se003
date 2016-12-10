@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161210211151"/>
+		date="20161210213312"/>
 	<dependencies>
 		<module organisation="org.elasticsearch" name="elasticsearch-spark_2.10">
 			<revision name="2.2.0" status="release" pubdate="20160202222857" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/elastic/elasticsearch-hadoop" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="150">
