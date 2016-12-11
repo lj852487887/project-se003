@@ -3,10 +3,13 @@
   */
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}
-
+import org.apache.spark.rdd.RDD
 import org.elasticsearch.spark.sql._
 
 import org.apache.spark.mllib.recommendation.ALS
+import org.apache.spark.mllib.recommendation.MatrixFactorizationModel
+import org.apache.spark.mllib.recommendation.Rating
+
 
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
@@ -22,11 +25,11 @@ object SparkAls {
 
 	val filePath = "/jli/ratings_Musical_Instruments.csv"
 	val rawData = sc.textFile(filePath)
-	val rawRating = rawData.map(_.split(",")).take(3)
-	val ratings = rawRating.map{
-		case Array(user,product,rating) => Rating(user.toInt,product.toInt,rating.toDouble)
-	}
+	val ratings = rawData.map(_.split(',').take(3) match {
+	    case Array(user, item, rate) => 
+            Rating(user.toInt, item.toInt, rate.toDouble)
+	})
 	val model = ALS.train(ratings,50,10,0.01)
-	model.userFeatures.count.saveAsTextFile("file:///usr/hadoop/lijun/data/")
+	println(model.userFeatures.count)
   }
 }

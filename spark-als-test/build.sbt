@@ -1,4 +1,4 @@
-name := "SparkES test"
+name := "SparkAls test"
 
 version := "1.0"
 

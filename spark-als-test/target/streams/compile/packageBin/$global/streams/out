@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0mPackaging /usr/hadoop/lijun/project-se003/spark-als-test/target/scala-2.10/sparkals-test_2.10-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	SparkAls$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-als-test/target/scala-2.10/classes/SparkAls$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	SparkAls$.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-als-test/target/scala-2.10/classes/SparkAls$.class[0m
+[0m[[0mdebug[0m] [0m	SparkAls.class[0m
+[0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-als-test/target/scala-2.10/classes/SparkAls.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
