@@ -14,18 +14,23 @@ object SparkES {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
 
-    val conf = new SparkConf().setAppName("SparkES test").setMaster("local[2]")
+    //val conf = new SparkConf().setAppName("SparkES test").setMaster("local[2]")
+    val conf = new SparkConf().setAppName("SparkES test").setMaster("spark://se003:7077")
+
 	val sc = new SparkContext(conf)
 	val sqlContext = new SQLContext(sc)
 
 	//ElasticSearch Configurations and Input Path to the File.
-	val jsonPath = "file:///usr/hadoop/lijun/data/meta_Amazon_Instant_Video.json"
+	val reviewPath = "/jli/data/Amazon-video-games-data/reviews_Video_Games.json"
+	val metaPath = "/jli/data/Amazon-video-games-data/meta_Video_Games.json"
+
 	val esConfig = Map(("es.nodes", "se003"), ("es.port", "9200"), ("es.index.auto.create", "true"), ("es.http.timeout", "5m"))
 
-	val jsonDf = sqlContext.read.json(jsonPath)
-
+	val reviewDf = sqlContext.read.json(reviewPath)
+	val metaDf = sqlContext.read.json(metaPath)
     //Storing it in Elastic Search Dynamically
 	
-	jsonDf.saveToEs("lijun/meta", cfg = esConfig)
+	reviewDf.saveToEs("jli_videogames/reviews", cfg = esConfig)
+	metaDf.saveToEs("jli_videogames/products", cfg = esConfig)
   }
 }
