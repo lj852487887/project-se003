@@ -30,7 +30,7 @@ object SparkES {
 	val metaDf = sqlContext.read.json(metaPath)
     //Storing it in Elastic Search Dynamically
 	
-	reviewDf.saveToEs("jli_videogames/reviews", cfg = esConfig)
-	metaDf.saveToEs("jli_videogames/products", cfg = esConfig)
+	reviewDf.saveToEs("jli_reviews/videogames", cfg = esConfig)
+	metaDf.saveToEs("jli_products/videogames", cfg = esConfig)
   }
 }
