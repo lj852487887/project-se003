@@ -12,5 +12,6 @@ libraryDependencies ++= Seq(
   "org.elasticsearch" % "elasticsearch-spark_2.10" % "2.2.0",
   "org.apache.spark" %% "spark-streaming-kafka" % "1.6.0",
   "org.codehaus.jettison" % "jettison" % "1.3.7",
-  "com.alibaba" % "fastjson" % "1.1.26"
+  "com.alibaba" % "fastjson" % "1.1.26",
+  "org.apache.kafka" %% "kafka_2.10"  % "0.8.2.1"
 )
