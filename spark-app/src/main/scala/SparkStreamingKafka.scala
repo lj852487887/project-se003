@@ -6,7 +6,7 @@ import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.dstream.DStream.toPairDStreamFunctions
 import org.apache.spark.streaming.kafka.KafkaUtils
-import _root_.kafka.serializer.DefaultDecoder
+import kafka.serializer.StringDecoder
 import com.alibaba.fastjson.JSON
 
 object SparkStreamingKafka {
@@ -30,7 +30,7 @@ object SparkStreamingKafka {
 
 
     // Create a direct stream
-    val kafkaStream = KafkaUtils.createDirectStream[String, String, DefaultDecoder, DefaultDecoder](ssc, kafkaParams, topics)
+    val kafkaStream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topics)
 
     val events = kafkaStream.flatMap(line => {
       val data = JSON.parseObject(line._2)
