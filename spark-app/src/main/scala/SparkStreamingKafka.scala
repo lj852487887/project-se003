@@ -6,7 +6,7 @@ import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.dstream.DStream.toPairDStreamFunctions
 import org.apache.spark.streaming.kafka.KafkaUtils
-import kafka.serializer.StringDecoder
+import _root_.kafka.serializer.StringDecoder
 import com.alibaba.fastjson.JSON
 
 object SparkStreamingKafka {
@@ -38,8 +38,7 @@ object SparkStreamingKafka {
     })
 
     // Compute user click times
-    val userClicks = events.map(x => (x.getString("uid"), x.getInteger("click_count"))).reduceByKey(_ + _)
-    userClicks.foreachRDD(println(_))
+    val userClicks = events.print()
 
     ssc.start()
     ssc.awaitTermination()
