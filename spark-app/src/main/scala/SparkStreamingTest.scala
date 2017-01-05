@@ -17,7 +17,7 @@ object SparkStreamingTest {
     val conf = new SparkConf().setAppName("SparkStreamingTest").setMaster("spark://se003:7077")
     val ssc = new StreamingContext(conf, Seconds(5))
 
-    val ds = ssc.socketTextStream("localhost", 9999)
+    val ds = ssc.socketTextStream("10.1.2.3", 9999)
     val result = ds.flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_)
     result.print()
 
