@@ -35,10 +35,13 @@ object KafkaEventProducer {
     random.nextInt(10)
   }
  
-  // bin/kafka-topics.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181/kafka --create --topic user_events --replication-factor 2 --partitions 2
-  // bin/kafka-topics.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181/kafka --list
-  // bin/kafka-topics.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181/kafka --describe user_events
-  // bin/kafka-console-consumer.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:22181/kafka --topic user_events --from-beginning
+  // bin/kafka-topics.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181 --create --topic user_events --replication-factor 2 --partitions 2
+  // bin/kafka-topics.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181 --list
+  // bin/kafka-topics.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181 --describe user_events
+  // bin/kafka-console-consumer.sh --zookeeper 10.1.2.3:2181,10.1.2.4:2181,10.1.2.5:2181 --topic user_events --from-beginning
+  
+
+
   def main(args: Array[String]): Unit = {
     val topic = "user_events"
     val brokers = "10.1.2.3:9092,10.1.2.4:9092,10.1.2.5:9092"
@@ -62,7 +65,7 @@ object KafkaEventProducer {
       producer.send(new KeyedMessage[String, String](topic, event.toString))
       println("Message sent: " + event)
      
-      Thread.sleep(200)
+      Thread.sleep(2000)
     }
   }  
 }
