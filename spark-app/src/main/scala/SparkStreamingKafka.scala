@@ -42,9 +42,7 @@ object SparkStreamingKafka {
     // Compute user click times
     events.foreachRDD{
       rdd =>
-        if (!rdd.isEmpty()) {
-          EsSpark.saveToEs(rdd,"/kafka_logs/test",esConfig)
-        }
+      sqlContext.read.json(rdd).saveToEs("kafka_logs/test", cfg = esConfig)
     }
 
     ssc.start()
