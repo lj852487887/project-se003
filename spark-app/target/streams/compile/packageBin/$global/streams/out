@@ -36,8 +36,6 @@
 [0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-app/target/scala-2.10/classes/model/AmazonRating.class[0m
 [0m[[0mdebug[0m] [0m	util/Dictionary.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-app/target/scala-2.10/classes/util/Dictionary.class[0m
-[0m[[0mdebug[0m] [0m	SparkAls$$anonfun$6.class[0m
-[0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-app/target/scala-2.10/classes/SparkAls$$anonfun$6.class[0m
 [0m[[0mdebug[0m] [0m	SparkStreamingTest$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	  /usr/hadoop/lijun/project-se003/spark-app/target/scala-2.10/classes/SparkStreamingTest$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	SparkAls$$anonfun$3.class[0m
