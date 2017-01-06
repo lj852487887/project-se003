@@ -13,5 +13,5 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-streaming-kafka" % "1.6.0",
   "org.codehaus.jettison" % "jettison" % "1.3.7",
   "com.alibaba" % "fastjson" % "1.1.26",
-  "org.apache.kafka" %% "kafka"  % "0.8.2.1" % "provided"
+  "org.apache.kafka" %% "kafka"  % "0.8.2.1"
 )
