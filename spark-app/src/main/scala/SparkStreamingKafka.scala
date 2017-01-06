@@ -1,4 +1,3 @@
-package SparkApp
 
 import _root_.kafka.serializer.StringDecoder
 import org.apache.log4j.{Level, Logger}
