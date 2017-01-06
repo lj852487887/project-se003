@@ -6,7 +6,6 @@ import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.dstream.DStream.toPairDStreamFunctions
 import org.apache.spark.streaming.kafka.KafkaUtils
-import com.alibaba.fastjson.JSON
 
 object SparkStreamingKafka {
 
@@ -30,14 +29,8 @@ object SparkStreamingKafka {
 
     // Create a direct stream
     val kafkaStream = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, topics)
-
-    val events = kafkaStream.flatMap(line => {
-      val data = JSON.parseObject(line._2)
-      Some(data)
-    })
-
+    kafkaStream.print()
     // Compute user click times
-    val userClicks = events.print()
 
     ssc.start()
     ssc.awaitTermination()

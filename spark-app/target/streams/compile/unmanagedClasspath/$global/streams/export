@@ -1,1 +1,1 @@
-/usr/hadoop/lijun/project-se003/spark-app/lib/kafka_2.10-0.8.2.1.jar:/usr/hadoop/lijun/project-se003/spark-app/lib/elasticsearch-spark_2.10-2.2.0.jar
+/usr/hadoop/lijun/project-se003/spark-app/lib/zkclient-0.3.jar:/usr/hadoop/lijun/project-se003/spark-app/lib/kafka_2.10-0.8.2.1.jar:/usr/hadoop/lijun/project-se003/spark-app/lib/elasticsearch-spark_2.10-2.2.0.jar:/usr/hadoop/lijun/project-se003/spark-app/lib/metrics-core-2.2.0.jar:/usr/hadoop/lijun/project-se003/spark-app/lib/spark-streaming-kafka_2.10-1.6.0.jar
