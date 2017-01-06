@@ -21,8 +21,8 @@ object SparkAls {
 
     val conf = new SparkConf().setAppName("AlsRecommender").setMaster("spark://se003:7077")
     val sc = new SparkContext(conf)
-    //val path = "/jli/data/Amazon-all-data/ratings.csv"
-    val path = "/jli/data/Amazon-video-games-data/ratings_Video_Games.csv"
+    val path = "/jli/data/Amazon-all-data/ratings.csv"
+    //val path = "/jli/data/Amazon-video-games-data/ratings_Video_Games.csv"
 
     //获取RDD
     val rawTrainingRatings = sc.textFile(path).map {
