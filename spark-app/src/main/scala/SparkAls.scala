@@ -7,7 +7,7 @@ import util.Dictionary
 import model.AmazonRating
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.broadcast.Broadcast
-import org.apache.spark.mllib.recommendation.{ALS, MatrixFactorizationModel, Rating, _}
+import org.apache.spark.mllib.recommendation.{ALS, MatrixFactorizationModel, Rating}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -57,7 +57,8 @@ object SparkAls {
 
     val sparkRatings = trainingRatings.map(toSparkRating)
 
-    println(sparkRatings.take(10))
+    //println(sparkRatings.take(10))
+    println(toAmazonRating(sparkRatings.take(1)(0)))
     //准备数据
     println("准备完数据")
 
