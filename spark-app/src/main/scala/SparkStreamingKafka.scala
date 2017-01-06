@@ -3,6 +3,7 @@ import _root_.kafka.serializer.StringDecoder
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark._
 import org.apache.spark.streaming._
+import org.apache.spark.sql.SQLContext
 import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.dstream.DStream.toPairDStreamFunctions
 import org.apache.spark.streaming.kafka.KafkaUtils
