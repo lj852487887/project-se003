@@ -4,7 +4,7 @@
 		module="sparkapp-_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170105202134"
+		publication="20170106115552"
 	>
 		<description>
 		SparkApp 
@@ -42,6 +42,6 @@
 		<dependency org="org.apache.spark" name="spark-streaming-kafka_2.10" rev="1.6.0" conf="compile->default(compile)"/>
 		<dependency org="org.codehaus.jettison" name="jettison" rev="1.3.7" conf="compile->default(compile)"/>
 		<dependency org="com.alibaba" name="fastjson" rev="1.1.26" conf="compile->default(compile)"/>
-		<dependency org="org.apache.kafka" name="kafka_2.10_2.10" rev="0.8.2.1" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka_2.10" rev="0.8.2.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
