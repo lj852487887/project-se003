@@ -33,7 +33,6 @@ object SparkAls {
 
     val trainingRatings = rawTrainingRatings.groupBy(_.userId)
       .flatMap(_._2)
-      .cache()
 
     println(s"Parsed ratingFile. Kept ${trainingRatings.count()} ratings out of ${rawTrainingRatings.count()}")
 
@@ -55,10 +54,9 @@ object SparkAls {
       )
     }
 
-    val sparkRatings = trainingRatings.map(toSparkRating)
+    //val sparkRatings = trainingRatings.map(toSparkRating)
 
-    //println(sparkRatings.take(10))
-    println(toAmazonRating(sparkRatings.take(1)(0)))
+    //println(toAmazonRating(sparkRatings.take(1)(0)))
     //准备数据
     println("准备完数据")
 
